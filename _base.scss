@@ -1,0 +1,402 @@
+@import "animation";
+
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+body,
+html {
+    font-size: 16px;
+    line-height: 1;
+    font-family: "Montserrat Regular";
+}
+
+body {
+    min-height: 100vh;
+    background-color: #a4e2ff;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: 100% 100%;
+    background-image: url("./images/BG_frame.png");
+    overflow: hidden;
+}
+
+.content {
+    width: 100%;
+    min-height: 120vh;
+    position: relative;
+}
+
+.section-hero {
+    padding-top: 3%;
+    padding-bottom: 9%;
+    padding-left: 3.7%;
+    padding-right: 3.7%;
+    // position: relative;
+}
+
+.section-hero::before {
+    content: '';
+    width: 100%;
+    min-height: 100%;
+
+    background-image: url(/images/bg-top-hero.png);
+    background-repeat: no-repeat;
+    object-fit: contain;
+    position: absolute;
+    top: 2.7vh;
+    // right: 0.5vw;
+    z-index: -2;
+}
+
+.section-hero::after {
+    content: '';
+    width: 100%;
+    min-height: 80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url(images/footer.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% auto;
+    z-index: -1;
+}
+
+.section {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    // top: 2.7vh;
+    // right: 0.5vw;
+    // left: 1.5vw;
+    // padding-left: 45px;
+    // padding-right: 45px;
+}
+
+.section-hero .border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    height: 4.5vh;
+    border-top: none !important;
+    background-image: url(images/BG_1_01.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 99;
+}
+
+
+
+.section-hero-top {
+    position: relative;
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 259px;
+    overflow: hidden;
+    margin-top: -4px;
+    margin-left: 3px;
+    margin-right: 1px;
+}
+
+.section-hero-top .character-left {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    z-index: -1;
+
+}
+
+.section-hero .active-left {
+    animation-name: scaleleft;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+}
+
+.section-hero-top .character-right {
+    position: absolute;
+    right: -15px;
+    top: 0;
+
+}
+
+.section-hero .active-right {
+    animation-name: scaleright;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+}
+
+.container .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-hero-title {
+    height: 17.9vh;
+    width: auto;
+    object-fit: cover;
+    margin-top: -46px;
+}
+
+[data-showInView="true"] {
+    visibility: visible;
+}
+
+.section-hero-scrolldown {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    margin-top: 24px;
+}
+
+.animate__zoomIn {
+    animation-name: zoomIn;
+}
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+}
+
+.animate__fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: 2s;
+    animation-delay: 1s;
+}
+
+.section-hero-video {
+    background-image: url(images/S1_Videoframe.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+    padding: 3.7vh 3.6vh 3.3vh 3.6vh;
+    display: inline-block;
+    animation-delay: 0.5s;
+    position: relative;
+}
+
+.section-hero-video_play,
+.section-hero-video_replay {
+    position: absolute;
+    top: calc(50% - 0.4vh);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 99;
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.section-hero-video video {
+    width: auto;
+    height: 42.7vh;
+}
+
+.section-rules-steps {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 53px 48px 60px;
+    transform: translateY(55px);
+}
+
+
+
+.section-rules .rules-fullwidth {
+    max-width: 100%;
+    position: relative;
+}
+
+.section-rules .rules-fullwidth::before {
+    width: 100%;
+    min-height: 100%;
+    content: " ";
+    background-image: url(/images/BG_3.png);
+    background-repeat: no-repeat;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    // right: 0.5vw;
+
+}
+
+.section-rules-title {
+    margin: 67px 0 6px 0;
+}
+
+.section-rules .gaming-play::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    top: -10px;
+    bottom: 0;
+    background: #00042b;
+    z-index: -4;
+}
+
+
+.section-rules-boy {
+    position: absolute;
+    bottom: 290px;
+    z-index: -2;
+}
+
+.section-rules-boy.left {
+    left: 50px;
+}
+
+.section-rules-boy.right {
+    right: 50px;
+}
+
+.section-rules-steps::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+    background-image: url(images/S3_Box.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+
+
+.section-rules .gaming-play {
+    padding: 80px 0 50px 0;
+}
+
+.section-rules .gaming-play_title {
+    max-width: 45%;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
+}
+
+.section-rules .gaming-play_title img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.section-rules .gaming-play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-rules .gaming-play_image img {
+    cursor: pointer;
+    height: auto;
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+.section-collector{
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.section-collector::before {
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/BG_4.png);
+    background-size: 100% auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+
+.section-collector-top {
+    position: relative;
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 115px;
+}
+
+.collect-count-left {
+    position: absolute;
+    left: 45px;
+    top: -24px;
+    z-index: -1;
+}
+
+.collect-count-center {
+    position: relative;
+    height: 250px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.collect-count-right {
+    position: absolute;
+    right: 45px;
+    top: 37px;
+    z-index: -1;
+}
+
+.footer {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #000d42;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
