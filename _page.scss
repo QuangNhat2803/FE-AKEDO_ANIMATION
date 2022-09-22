@@ -1,0 +1,303 @@
+@import "./animation";
+
+.wrapper {
+    max-width: 1200px;
+    min-height: 100vh;
+    background-image: url(./images/BG_frame.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    z-index: 999;
+
+    section {
+        width: 100%;
+        position: relative;
+        // overflow: hidden;
+    }
+
+    .section::before,
+    .section::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        background-size: 100% auto;
+        z-index: -1;
+    }
+
+    //----------------------------------------------SECTION-HERO-----------------------------------//
+    .section-hero::before {
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/bg-top-hero.png);
+        background-repeat: no-repeat;
+        top: 3vh;
+    }
+
+    .section-hero::after {
+        min-height: 80px;
+        background-image: url(images/footer.png);
+        background-repeat: no-repeat;
+        bottom: 0;
+        background-position: bottom;
+    }
+
+    .section-hero {
+        min-height: 120vh;
+
+        .border-top {
+            width: 100%;
+            height: 4vh;
+            background-image: url("images/BG_1_01.jpg");
+            background-repeat: no-repeat;
+            border-top: none !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+        }
+
+        &-top {
+            position: relative;
+            text-align: center;
+            padding-top: 110px;
+            padding-bottom: 259px;
+
+            .character {
+                &-left {
+                    position: absolute;
+                    left: 30px;
+                    top: 3.5vh;
+                    z-index: -1;
+                }
+
+                &-right {
+                    position: absolute;
+                    right: 30px;
+                    top: 3.5vh;
+                    z-index: -1;
+                }
+            }
+
+            .active-left {
+                animation-name: scaleleft;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-delay: 0s;
+            }
+
+            .active-right {
+                animation-name: scaleright;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-delay: 0s;
+            }
+        }
+
+        .container {
+            .section-hero {
+                &-title {
+                    height: 17.9vh;
+                    width: auto;
+                    margin-top: -16px;
+                }
+
+                &-scrolldown {
+                    position: relative;
+                    text-align: center;
+                    z-index: 2;
+                    margin-top: 24px;
+                }
+
+                &-video {
+
+                    background-image: url(images/S1_Videoframe.png);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    padding: 3.7vh 3.6vh 3.3vh 3.6vh;
+                    display: inline-block;
+                    animation-delay: 0.5s;
+                    position: relative;
+
+                    &_play,
+                    &_replay {
+                        position: absolute;
+                        top: calc(50% - 0.4vh);
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        cursor: pointer;
+                        pointer-events: auto;
+                        z-index: 99;
+                        display: none;
+                    }
+
+                    img {
+                        vertical-align: middle;
+                        border-style: none;
+                    }
+
+                    video {
+                        width: auto;
+                        height: 42.7vh;
+                    }
+                }
+            }
+        }
+    }
+
+
+    //----------------------------------------------SECTION-RULES-----------------------------------//
+    .section-rules::before {
+        min-height: 100%;
+        background-image: url(/images/BG_3.png);
+        background-repeat: no-repeat;
+
+    }
+
+    .section-rules {
+        &-title {
+            padding: 67px 0 6px;
+        }
+
+        &-steps {
+            display: flex;
+            align-items: center;
+            flex-flow: row wrap;
+            width: 100%;
+            padding: 53px 48px 60px;
+            transform: translateY(55px);
+        }
+
+        &-steps::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-image: url(images/S3_Box.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            z-index: -2;
+        }
+
+        &-boy {
+            position: absolute;
+            bottom: 290px;
+            z-index: -3;
+        }
+
+        .left {
+            left: 50px;
+        }
+
+        .right {
+            right: 50px;
+        }
+
+
+
+
+    }
+
+    //----------------------------------------------SECTION-COLLECTOR-----------------------------------//
+    .section-collector {
+        padding-top: 50px;
+        max-width: 100%;
+        min-height: 100%;
+
+        &::before {
+            content: "";
+            width: 100%;
+            min-height: 100%;
+            background-image: url(images/BG_4.png);
+            background-size: 100% auto;
+
+            position: absolute;
+            top: 0;
+            // z-index: -99;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+
+        &-top {
+            position: relative;
+            text-align: center;
+            padding-top: 110px;
+            padding-bottom: 115px;
+        }
+
+        &-left {
+            position: absolute;
+            left: 45px;
+            top: -24px;
+            z-index: -1;
+        }
+
+        &-center {
+            position: relative;
+            height: 250px;
+            object-fit: contain;
+            z-index: 1;
+        }
+
+        &-right {
+            position: absolute;
+            right: 45px;
+            top: 37px;
+            z-index: -1;
+        }
+
+        &-image-title {
+            padding-bottom: 44px;
+        }
+
+        &-click-season {
+            padding: 0 0 20px;
+        }
+
+        .season-group{
+            position: relative;
+            height: 1026px;
+            width: 100%;
+            .season-title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: absolute;
+                width: 100%;
+                height: 66px;
+                z-index: 999;
+                top: 6px;
+            }
+            .season-group-2 {
+                background-image: url(images/bg-season-2.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+               
+            }
+            .season-group-2.active{
+                z-index: 2;
+            }
+        }
+
+        
+    }
+
+    //----------------------------------------------FOOTER-----------------------------------//
+    .footer {
+        width: 100%;
+        max-width: 1200px;
+        background-color: #000d42;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+}
