@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     overflow: hidden;
-    z-index: 999;
+
 
     section {
         width: 100%;
@@ -203,11 +203,18 @@
 
     }
 
+
+
+
+
+
+
+
     //----------------------------------------------SECTION-COLLECTOR-----------------------------------//
     .section-collector {
         padding-top: 50px;
         max-width: 100%;
-        min-height: 100%;
+        min-height: 180vh;
 
         &::before {
             content: "";
@@ -259,10 +266,11 @@
             padding: 0 0 20px;
         }
 
-        .season-group{
+        .season-group {
             position: relative;
             height: 1026px;
             width: 100%;
+
             .season-title {
                 display: flex;
                 align-items: center;
@@ -272,24 +280,230 @@
                 height: 66px;
                 z-index: 999;
                 top: 6px;
+
+                &-left,
+                &-right{
+                    cursor: pointer;
+                }
+
             }
-            .season-group-2 {
+
+            &-2.active {
+                z-index: 2;
+            }
+            
+            &-2.hide {
+                z-index: 1;
+                filter: brightness(0.7);
+            }
+
+            &-2 {
                 background-image: url(images/bg-season-2.png);
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
-                width: 100%;
+                width: 98%;
                 height: 100%;
                 position: absolute;
                 top: 0;
-               
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+
+                .content-carousel {
+                    width: 100%;
+                    min-height: 753px;
+                    max-height: 800px;
+                }
             }
-            .season-group-2.active{
+
+            &-1.active {
                 z-index: 2;
+                
+            }
+            &-1.hide {
+                z-index: 1;
+                filter: brightness(0.7);
+            }
+
+            &-1 {
+                background-image: url(images/bg-season-1.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 98%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+
+            }
+
+            .content-season {
+                margin-top: 90px;
+                width: 100%;
+                height: 100px;
+
             }
         }
 
-        
+        &-download,
+        .img-prev,
+        .img-next {
+            animation: pulse 1s infinite;
+        }
+
     }
+
+    .section-battle {
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 6%;
+        padding-bottom: 12%;
+        position: relative;
+        // z-index: -1;
+
+        &::before {
+            content: "";
+            width: 100%;
+            min-height: 100%;
+            background-image: url(images/BG_2.png);
+            background-size: 100% auto;
+            background-position-y: -156px;
+            position: absolute;
+            top: 0;
+            // z-index: -99;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+        }
+
+        &::after {
+            min-height: 80px;
+            background-image: url(images/footer.png);
+            background-repeat: no-repeat;
+            bottom: 0;
+            background-position: bottom;
+        }
+
+        &-title {
+            margin-bottom: 3%;
+        }
+
+        &-video {
+            display: inline-block;
+            background-image: url(images/S2_Videoframe.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center center;
+            padding: 35px 32px 32px 34px;
+            margin-bottom: 6%;
+        }
+
+        &-video_play,
+        &-video_replay {
+            position: absolute;
+            top: calc(50% - 0.3%);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            pointer-events: auto;
+            z-index: 99;
+            display: none;
+        }
+
+        video {
+            width: auto;
+            height: 45vh;
+        }
+
+        .play-banner {
+            position: relative;
+            max-width: 782px;
+            margin: 0 auto;
+
+            .bg-play {
+                width: 100%;
+                position: relative;
+            }
+
+            .section-battle-play-game {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                left: 0;
+                bottom: 34px;
+                cursor: pointer;
+
+            }
+
+            .d-inline-block {
+                display: inline-block !important;
+                animation: pulse 1s infinite;
+
+            }
+
+            
+        }
+
+
+        /* The Modal */
+        .modal {
+            padding-top: 50px;
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal__content {
+            width: 595px;
+            height: 833px;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: url(images/game-frame.png) center no-repeat;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                z-index: -2;
+                background-size: 100% 100%;
+                
+            }
+        }
+
+        // /* Modal Content */
+        // .modal__content {
+        //     position: relative;
+        //     object-fit: cover;
+        //     margin: auto;
+        //     height: 893px;
+        //     width: 595px;
+        //    
+        //     background-image: url(./images/game-frame.png);
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+
+
+        // }
+
+
+        // .close:hover,
+        // .close:focus {
+        //     color: #000;
+        //     text-decoration: none;
+        //     cursor: pointer;
+        // }
+
+    }
+
 
     //----------------------------------------------FOOTER-----------------------------------//
     .footer {
@@ -300,4 +514,7 @@
         display: flex;
         justify-content: center;
     }
+
+
+
 }
