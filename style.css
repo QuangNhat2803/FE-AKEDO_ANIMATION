@@ -150,11 +150,54 @@ body {
     transform: scale3d(1, 1, 1);
   }
 }
+@-webkit-keyframes leftToRight {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 5%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes leftToRight {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 5%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes rightToLeft {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: 5%;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes rightToLeft {
+  0% {
+    right: -100%;
+  }
+  50% {
+    right: 5%;
+  }
+  100% {
+    right: 0;
+  }
+}
 .wrapper {
   max-width: 1200px;
   min-height: 100vh;
   background-image: url(./images/BG_frame.png);
-  background-repeat: no-repeat;
   background-size: 100%;
   overflow: hidden;
 }
@@ -220,28 +263,12 @@ body {
   z-index: -1;
 }
 .wrapper .section-hero-top .active-left {
-  -webkit-animation-name: scaleleft;
-          animation-name: scaleleft;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation: leftToRight linear 0.6s alternate 0.5s, scaleleft linear 2s infinite 0s;
+          animation: leftToRight linear 0.6s alternate 0.5s, scaleleft linear 2s infinite 0s;
 }
 .wrapper .section-hero-top .active-right {
-  -webkit-animation-name: scaleright;
-          animation-name: scaleright;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation: rightToLeft linear 0.6s alternate 0.5s, scaleright linear 2s infinite 0s;
+          animation: rightToLeft linear 0.6s alternate 0.5s, scaleright linear 2s infinite 0s;
 }
 .wrapper .section-hero .container .section-hero-title {
   height: 17.9vh;
@@ -412,13 +439,15 @@ body {
   position: relative;
   height: 1026px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .wrapper .section-collector .season-group .season-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  width: 100%;
+  width: 85%;
   height: 66px;
   z-index: 999;
   top: 6px;
@@ -457,9 +486,6 @@ body {
   width: 100%;
   min-height: 753px;
   max-height: 800px;
-}
-.wrapper .section-collector .season-group-1.active {
-  z-index: 2;
 }
 .wrapper .section-collector .season-group-1.hide {
   z-index: 1;
@@ -599,6 +625,16 @@ body {
   margin: auto;
   z-index: -2;
   background-size: 100% 100%;
+}
+.wrapper .section-battle .modal__content .modal-close {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  z-index: 9999;
+  text-align: right;
+  width: 10%;
+  box-shadow: 3px -2px 22px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
 }
 .wrapper .footer {
   width: 100%;

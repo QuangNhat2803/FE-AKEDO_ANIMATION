@@ -4,7 +4,7 @@
     max-width: 1200px;
     min-height: 100vh;
     background-image: url(./images/BG_frame.png);
-    background-repeat: no-repeat;
+  
     background-size: 100%;
     overflow: hidden;
 
@@ -83,21 +83,22 @@
                 }
             }
 
+            // .active-left {
+            //     animation-name: scaleleft;
+            //     animation-duration: 2s;
+            //     animation-iteration-count: infinite;
+            //     animation-timing-function: linear;
+            //     animation-delay: 0s;
+            // }
+
             .active-left {
-                animation-name: scaleleft;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                animation-delay: 0s;
+                animation: leftToRight linear 0.6s alternate 0.5s, scaleleft linear 2s infinite 0s;
             }
 
-            .active-right {
-                animation-name: scaleright;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
-                animation-delay: 0s;
+            .active-right { 
+                animation: rightToLeft linear 0.6s alternate 0.5s, scaleright linear 2s infinite 0s;
             }
+            
         }
 
         .container {
@@ -317,13 +318,14 @@
             position: relative;
             height: 1026px;
             width: 100%;
-
+            display: flex;
+            justify-content: center;
             .season-title {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 position: absolute;
-                width: 100%;
+                width: 85%;
                 height: 66px;
                 z-index: 999;
                 top: 6px;
@@ -372,10 +374,6 @@
                 }
             }
 
-            &-1.active {
-                z-index: 2;
-
-            }
 
             &-1.hide {
                 z-index: 1;
@@ -542,7 +540,17 @@
                 margin: auto;
                 z-index: -2;
                 background-size: 100% 100%;
+            }
 
+            .modal-close {
+                position: absolute;
+                top: -1rem;
+                right: -1rem;
+                z-index: 9999;
+                text-align: right;
+                width: 10%;
+                box-shadow: 3px -2px 22px 0 rgb(0 0 0 / 40%);
+                border-radius: 100%;
             }
         }
 
