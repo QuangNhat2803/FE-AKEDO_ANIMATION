@@ -175,10 +175,11 @@ body {
   height: 100%;
   background-image: url(/images/bg-top-hero.png);
   background-repeat: no-repeat;
-  top: 3vh;
 }
 .wrapper .section-hero::after {
   min-height: 80px;
+  width: 100%;
+  height: 100%;
   background-image: url(images/footer.png);
   background-repeat: no-repeat;
   bottom: 0;
@@ -186,6 +187,7 @@ body {
 }
 .wrapper .section-hero {
   min-height: 120vh;
+  padding-bottom: 9%;
 }
 .wrapper .section-hero .border-top {
   width: 100%;
@@ -296,6 +298,12 @@ body {
   padding: 53px 48px 60px;
   transform: translateY(55px);
 }
+.wrapper .section-rules-steps-col img {
+  min-height: 198px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .wrapper .section-rules-steps::before {
   content: "";
   display: block;
@@ -320,10 +328,42 @@ body {
 .wrapper .section-rules .right {
   right: 50px;
 }
+.wrapper .section-rules .gaming-play {
+  padding: 80px 0 50px 0;
+  position: relative;
+}
+.wrapper .section-rules .gaming-play::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -10px;
+  bottom: 0;
+  background: #00042b;
+  z-index: -1;
+}
+.wrapper .section-rules .gaming-play_title {
+  max-width: 45%;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+.wrapper .section-rules .gaming-play_title img {
+  width: 100%;
+  height: auto;
+}
+.wrapper .section-rules .gaming-play_image {
+  width: 100%;
+  min-height: 85px;
+  margin: 0 auto;
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+  cursor: pointer;
+}
 .wrapper .section-collector {
-  padding-top: 50px;
+  position: relative;
   max-width: 100%;
-  min-height: 180vh;
+  min-height: 194vh;
 }
 .wrapper .section-collector::before {
   content: "";
@@ -333,6 +373,7 @@ body {
   background-size: 100% auto;
   position: absolute;
   top: 0;
+  z-index: -99;
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -346,7 +387,7 @@ body {
   position: absolute;
   left: 45px;
   top: -24px;
-  z-index: -1;
+  z-index: -2;
 }
 .wrapper .section-collector-center {
   position: relative;
@@ -359,7 +400,7 @@ body {
   position: absolute;
   right: 45px;
   top: 37px;
-  z-index: -1;
+  z-index: -2;
 }
 .wrapper .section-collector-image-title {
   padding-bottom: 44px;
@@ -383,6 +424,11 @@ body {
   top: 6px;
 }
 .wrapper .section-collector .season-group .season-title-left, .wrapper .section-collector .season-group .season-title-right {
+  flex: 0 0 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 .wrapper .section-collector .season-group-2.active {
@@ -403,6 +449,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
+}
+.wrapper .section-collector .season-group-2 .carousel {
+  overflow: hidden;
 }
 .wrapper .section-collector .season-group-2 .content-carousel {
   width: 100%;
@@ -426,6 +475,14 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+.wrapper .section-collector .season-group-1 .carousel {
+  overflow: hidden;
+}
+.wrapper .section-collector .season-group-1 .content-carousel {
+  width: 100%;
+  min-height: 753px;
+  max-height: 800px;
 }
 .wrapper .section-collector .season-group .content-season {
   margin-top: 90px;
@@ -550,10 +607,4 @@ body {
   padding: 20px 0;
   display: flex;
   justify-content: center;
-}
-
-@media screen and (max-width: 1550px) {
-  .wrapper .section-hero {
-    min-height: 140vh;
-  }
 }/*# sourceMappingURL=style.css.map */

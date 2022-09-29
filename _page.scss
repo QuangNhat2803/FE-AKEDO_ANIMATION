@@ -30,11 +30,13 @@
         height: 100%;
         background-image: url(/images/bg-top-hero.png);
         background-repeat: no-repeat;
-        top: 3vh;
+        // top: 3vh;
     }
 
     .section-hero::after {
         min-height: 80px;
+        width: 100%;
+        height: 100%;
         background-image: url(images/footer.png);
         background-repeat: no-repeat;
         bottom: 0;
@@ -43,6 +45,8 @@
 
     .section-hero {
         min-height: 120vh;
+
+        padding-bottom: 9%;
 
         .border-top {
             width: 100%;
@@ -168,6 +172,12 @@
             width: 100%;
             padding: 53px 48px 60px;
             transform: translateY(55px);
+
+            &-col img {
+                min-height: 198px;
+                width: 100%;
+                object-fit: cover;
+            }
         }
 
         &-steps::before {
@@ -199,7 +209,44 @@
         }
 
 
+        .gaming-play {
+            padding: 80px 0 50px 0;
+            position: relative;
 
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -4px;
+                right: -4px;
+                top: -10px;
+                bottom: 0;
+                background: #00042b;
+                z-index: -1;
+
+
+            }
+
+            &_title {
+                max-width: 45%;
+                padding-bottom: 40px;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    // object-fit: cover;
+                }
+            }
+
+            &_image {
+                width: 100%;
+                min-height: 85px;
+                margin: 0 auto;
+                animation: pulse 1s infinite;
+                cursor: pointer;
+            }
+        }
 
     }
 
@@ -212,9 +259,10 @@
 
     //----------------------------------------------SECTION-COLLECTOR-----------------------------------//
     .section-collector {
-        padding-top: 50px;
+        // padding-top: 50px;
+        position: relative;
         max-width: 100%;
-        min-height: 180vh;
+        min-height: 194vh;
 
         &::before {
             content: "";
@@ -222,10 +270,9 @@
             min-height: 100%;
             background-image: url(images/BG_4.png);
             background-size: 100% auto;
-
             position: absolute;
             top: 0;
-            // z-index: -99;
+            z-index: -99;
             background-repeat: no-repeat;
             background-size: 100% auto;
         }
@@ -241,7 +288,7 @@
             position: absolute;
             left: 45px;
             top: -24px;
-            z-index: -1;
+            z-index: -2;
         }
 
         &-center {
@@ -255,7 +302,7 @@
             position: absolute;
             right: 45px;
             top: 37px;
-            z-index: -1;
+            z-index: -2;
         }
 
         &-image-title {
@@ -282,7 +329,12 @@
                 top: 6px;
 
                 &-left,
-                &-right{
+                &-right {
+                    flex: 0 0 50%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     cursor: pointer;
                 }
 
@@ -291,7 +343,7 @@
             &-2.active {
                 z-index: 2;
             }
-            
+
             &-2.hide {
                 z-index: 1;
                 filter: brightness(0.7);
@@ -309,6 +361,10 @@
                 transform: translateX(-50%);
                 bottom: 0;
 
+                .carousel {
+                    overflow: hidden;
+                }
+
                 .content-carousel {
                     width: 100%;
                     min-height: 753px;
@@ -318,8 +374,9 @@
 
             &-1.active {
                 z-index: 2;
-                
+
             }
+
             &-1.hide {
                 z-index: 1;
                 filter: brightness(0.7);
@@ -336,6 +393,15 @@
                 left: 50%;
                 transform: translateX(-50%);
 
+                .carousel {
+                    overflow: hidden;
+                }
+
+                .content-carousel {
+                    width: 100%;
+                    min-height: 753px;
+                    max-height: 800px;
+                }
             }
 
             .content-season {
@@ -441,7 +507,7 @@
 
             }
 
-            
+
         }
 
 
@@ -463,6 +529,7 @@
             width: 595px;
             height: 833px;
             position: relative;
+
             &::before {
                 content: "";
                 display: block;
@@ -475,7 +542,7 @@
                 margin: auto;
                 z-index: -2;
                 background-size: 100% 100%;
-                
+
             }
         }
 
