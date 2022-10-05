@@ -154,7 +154,7 @@ body {
   0% {
     left: -100%;
   }
-  50% {
+  80% {
     left: 5%;
   }
   100% {
@@ -165,7 +165,7 @@ body {
   0% {
     left: -100%;
   }
-  50% {
+  80% {
     left: 5%;
   }
   100% {
@@ -176,7 +176,7 @@ body {
   0% {
     right: -100%;
   }
-  50% {
+  80% {
     right: 5%;
   }
   100% {
@@ -187,7 +187,7 @@ body {
   0% {
     right: -100%;
   }
-  50% {
+  80% {
     right: 5%;
   }
   100% {
@@ -263,12 +263,12 @@ body {
   z-index: -1;
 }
 .wrapper .section-hero-top .active-left {
-  -webkit-animation: leftToRight linear 0.6s alternate 0.5s, scaleleft linear 2s infinite 0s;
-          animation: leftToRight linear 0.6s alternate 0.5s, scaleleft linear 2s infinite 0s;
+  -webkit-animation: leftToRight linear 1s alternate 1s, scaleleft linear 2s infinite 2s;
+          animation: leftToRight linear 1s alternate 1s, scaleleft linear 2s infinite 2s;
 }
 .wrapper .section-hero-top .active-right {
-  -webkit-animation: rightToLeft linear 0.6s alternate 0.5s, scaleright linear 2s infinite 0s;
-          animation: rightToLeft linear 0.6s alternate 0.5s, scaleright linear 2s infinite 0s;
+  -webkit-animation: rightToLeft linear 1s alternate 1s, scaleright linear 2s infinite 2s;
+          animation: rightToLeft linear 1s alternate 1s, scaleright linear 2s infinite 2s;
 }
 .wrapper .section-hero .container .section-hero-title {
   height: 17.9vh;
@@ -320,24 +320,30 @@ body {
 .wrapper .section-rules-steps {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-flow: row wrap;
   width: 100%;
   padding: 53px 48px 60px;
   transform: translateY(55px);
 }
+.wrapper .section-rules-steps-col {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .wrapper .section-rules-steps-col img {
   min-height: 198px;
+  min-height: 1px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .wrapper .section-rules-steps::before {
   content: "";
   display: block;
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
   top: 0;
   background-image: url(images/S3_Box.png);
   background-repeat: no-repeat;
@@ -350,7 +356,7 @@ body {
   z-index: -3;
 }
 .wrapper .section-rules .left {
-  left: 50px;
+  left: 60px;
 }
 .wrapper .section-rules .right {
   right: 50px;
@@ -390,7 +396,7 @@ body {
 .wrapper .section-collector {
   position: relative;
   max-width: 100%;
-  min-height: 194vh;
+  padding-bottom: 96px;
 }
 .wrapper .section-collector::before {
   content: "";
@@ -451,6 +457,17 @@ body {
   height: 66px;
   z-index: 999;
   top: 6px;
+}
+.wrapper .section-collector .season-group .season-title #img-s1 {
+  opacity: 0.5;
+}
+.wrapper .section-collector .season-group .season-title #img-s1:hover {
+  opacity: 1 !important;
+  transition: 0.3s;
+}
+.wrapper .section-collector .season-group .season-title #img-s2:hover {
+  opacity: 1 !important;
+  transition: 0.3s;
 }
 .wrapper .section-collector .season-group .season-title-left, .wrapper .section-collector .season-group .season-title-right {
   flex: 0 0 50%;
@@ -547,9 +564,6 @@ body {
   background-repeat: no-repeat;
   bottom: 0;
   background-position: bottom;
-}
-.wrapper .section-battle-title {
-  margin-bottom: 3%;
 }
 .wrapper .section-battle-video {
   display: inline-block;

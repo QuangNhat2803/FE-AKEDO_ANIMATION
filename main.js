@@ -19,19 +19,27 @@ $(document).on('click', 'video, #btnplay, #btnreplay', function (e) {
 function changeGr1() {  
     var gr1 = document.getElementById("group1")
     var gr2 = document.getElementById("group2")
-    gr1.style="z-index: 2;filter: brightness(1);"
-    gr2.style="z-index: 1;filter: brightness(0.7);" 
-     
+    var img2 = document.getElementById("img-s2")
+    var img1 = document.getElementById("img-s1")
+    gr1.style = "z-index: 2;filter: brightness(1);"
+    gr2.style = "z-index: 1;filter: brightness(0.7);" 
+    img2.style = "opacity: 0.5;"
+    img1.style = "opacity: 1;"
   }  
 
-  function changeGr2() {  
+function changeGr2() {  
     var gr1 = document.getElementById("group1")
     var gr2 = document.getElementById("group2")
+    var img2 = document.getElementById("img-s2")
+    var img1 = document.getElementById("img-s1")
     gr1.style="z-index: 1;filter: brightness(0.7);"
     gr2.style="z-index: 2;filter: brightness(1);"
+    img1.style = "opacity: 0.5;"
+    img2.style = "opacity: 1;"
   }
     
-var modal = document.getElementById("myModal");
+{
+  var modal = document.getElementById("myModal");
 var btn1 = document.getElementById("myBtn-1");
 var btn2 = document.getElementById("myBtn-2");
 var span = document.getElementsByClassName("modal-close")[0];
@@ -58,7 +66,8 @@ btn1.onclick = function() {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  } 
+  }
+} 
 
       
 

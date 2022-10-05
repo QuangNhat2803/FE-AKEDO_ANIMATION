@@ -92,11 +92,13 @@
             // }
 
             .active-left {
-                animation: leftToRight linear 0.6s alternate 0.5s, scaleleft linear 2s infinite 0s;
+                animation: leftToRight linear 1s alternate 1s, scaleleft linear 2s infinite 2s;
+
             }
 
             .active-right { 
-                animation: rightToLeft linear 0.6s alternate 0.5s, scaleright linear 2s infinite 0s;
+                animation: rightToLeft linear 1s alternate 1s, scaleright linear 2s infinite 2s;
+                
             }
             
         }
@@ -169,15 +171,23 @@
         &-steps {
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-flow: row wrap;
             width: 100%;
             padding: 53px 48px 60px;
             transform: translateY(55px);
 
-            &-col img {
-                min-height: 198px;
-                width: 100%;
-                object-fit: cover;
+            &-col {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    min-height: 198px;
+                    min-height: 1px;
+                    width: 100%;
+                    
+                }
             }
         }
 
@@ -185,9 +195,9 @@
             content: "";
             display: block;
             position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
             top: 0;
             background-image: url(images/S3_Box.png);
             background-repeat: no-repeat;
@@ -202,7 +212,7 @@
         }
 
         .left {
-            left: 50px;
+            left: 60px;
         }
 
         .right {
@@ -251,20 +261,14 @@
 
     }
 
-
-
-
-
-
-
-
     //----------------------------------------------SECTION-COLLECTOR-----------------------------------//
     .section-collector {
         // padding-top: 50px;
         position: relative;
         max-width: 100%;
-        min-height: 194vh;
-
+        // min-height: 194vh;
+        padding-bottom: 96px;
+        
         &::before {
             content: "";
             width: 100%;
@@ -330,6 +334,21 @@
                 z-index: 999;
                 top: 6px;
 
+                #img-s1{
+                    opacity: 0.5;
+                }
+
+                #img-s1:hover{
+                    opacity: 1 !important;
+                    transition: 0.3s
+                }
+                #img-s2:hover{
+                    opacity: 1 !important;
+                    transition: 0.3s
+                }
+              
+                
+
                 &-left,
                 &-right {
                     flex: 0 0 50%;
@@ -377,6 +396,7 @@
 
             &-1.hide {
                 z-index: 1;
+                
                 filter: brightness(0.7);
             }
 
@@ -390,7 +410,7 @@
                 top: 0;
                 left: 50%;
                 transform: translateX(-50%);
-
+                
                 .carousel {
                     overflow: hidden;
                 }
@@ -448,9 +468,9 @@
             background-position: bottom;
         }
 
-        &-title {
-            margin-bottom: 3%;
-        }
+        // &-title {
+        //     margin-bottom: 3%;
+        // }
 
         &-video {
             display: inline-block;
