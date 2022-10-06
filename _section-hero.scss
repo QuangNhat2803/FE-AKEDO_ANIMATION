@@ -1,0 +1,131 @@
+@import './page';
+
+//----------------------------------------------SECTION-HERO-----------------------------------//
+.section-hero::before {
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/bg-top-hero.png);
+    background-repeat: no-repeat;
+    // top: 3vh;
+}
+
+.section-hero::after {
+    min-height: 80px;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/footer.png);
+    background-repeat: no-repeat;
+    bottom: 0;
+    background-position: bottom;
+}
+
+.section-hero {
+    min-height: 120vh;
+
+    padding-bottom: 9%;
+
+    .border-top {
+        width: 100%;
+        height: 4vh;
+        background-image: url("images/BG_1_01.jpg");
+        background-repeat: no-repeat;
+        border-top: none !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    &-top {
+        position: relative;
+        text-align: center;
+        padding-top: 110px;
+        padding-bottom: 259px;
+
+        .character {
+            &-left {
+                position: absolute;
+                left: 30px;
+                top: 3.5vh;
+                z-index: -1;
+            }
+
+            &-right {
+                position: absolute;
+                right: 30px;
+                top: 3.5vh;
+                z-index: -1;
+            }
+        }
+
+        // .active-left {
+        //     animation-name: scaleleft;
+        //     animation-duration: 2s;
+        //     animation-iteration-count: infinite;
+        //     animation-timing-function: linear;
+        //     animation-delay: 0s;
+        // }
+
+        .active-left {
+            animation: leftToRight linear 1s alternate 1s, scaleleft linear 2s infinite 2s;
+
+        }
+
+        .active-right { 
+            animation: rightToLeft linear 1s alternate 1s, scaleright linear 2s infinite 2s;
+            
+        }
+        
+    }
+
+    .container {
+        .section-hero {
+            &-title {
+                height: 17.9vh;
+                width: auto;
+                margin-top: -16px;
+            }
+
+            &-scrolldown {
+                position: relative;
+                text-align: center;
+                z-index: 2;
+                margin-top: 24px;
+            }
+
+            &-video {
+
+                background-image: url(images/S1_Videoframe.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                padding: 3.7vh 3.6vh 3.3vh 3.6vh;
+                display: inline-block;
+                animation-delay: 0.5s;
+                position: relative;
+
+                &_play,
+                &_replay {
+                    position: absolute;
+                    top: calc(50% - 0.4vh);
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                    pointer-events: auto;
+                    z-index: 99;
+                    display: none;
+                }
+
+                img {
+                    vertical-align: middle;
+                    border-style: none;
+                }
+
+                video {
+                    width: auto;
+                    height: 42.7vh;
+                }
+            }
+        }
+    }
+}

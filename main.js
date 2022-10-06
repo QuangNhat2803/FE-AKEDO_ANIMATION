@@ -1,7 +1,7 @@
-$(document).on('click', 'video, #btnplay, #btnreplay', function (e) {
+$(document).on('click', '#myVideo, #btnplay, #btnreplay', function (e) {
   var pl = document.getElementById('btnplay')
   var rpl = document.getElementById('btnreplay')
-  var video = $('video').get(0);  // This line has been updated.
+  var video = $('#myVideo').get(0); 
   if (video.paused === false) {
           video.pause();
           pl.style='display: block';
@@ -12,9 +12,45 @@ $(document).on('click', 'video, #btnplay, #btnreplay', function (e) {
       } else {
           rpl.style='display: block';
       }
-      
   return false;
 });
+
+$(document).on('click', '#myVideo2, #btnplay2, #btnreplay2', function (e) {
+  var pl2 = document.getElementById('btnplay2')
+  var rpl2 = document.getElementById('btnreplay')
+  var video = $('#myVideo2').get(0); 
+  if (video.paused === false) {
+          video.pause();
+          pl2.style='display: block';
+      }else if (video.paused === true)  {
+          video.play();
+          pl2.style='display: none';
+          rpl2.style='display: none';
+      } else {
+          rpl2.style='display: block';
+      }
+  return false;
+});
+
+
+var vid = document.getElementById("myVideo");
+var vid2 = document.getElementById("myVideo2");
+var rpl2 = document.getElementById('btnreplay2')
+var rpl = document.getElementById('btnreplay')
+vid.onended = function() {
+  rpl.style='display: block';
+};
+vid.oncanplay = function(){
+  rpl.style='display: none';
+};
+vid2.onended = function() {
+  rpl2.style='display: block';
+};
+vid2.oncanplay = function(){
+  rpl2.style='display: none';
+};
+
+
     
 function changeGr1() {  
     var gr1 = document.getElementById("group1")
