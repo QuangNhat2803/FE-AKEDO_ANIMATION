@@ -101,13 +101,18 @@
                     opacity: 0.5;
                 }
 
-                #img-s1:hover{
-                    opacity: 1 !important;
-                    transition: 0.3s
+                .season-title-right:hover{
+                    #img-s1{
+                        opacity: 1 !important;
+                        transition: 0.3s
+                    }
                 }
-                #img-s2:hover{
-                    opacity: 1 !important;
-                    transition: 0.3s
+                
+                .season-title-left:hover{
+                    #img-s2{
+                        opacity: 1 !important;
+                        transition: 0.3s
+                    }
                 }
               
                 
@@ -190,6 +195,23 @@
                 width: 100%;
                 height: 100px;
 
+                .carousel-control-prev{
+                    opacity: 1; 
+                    height: 50px; 
+                    width: 50px; 
+                    position: absolute; 
+                    top: 45%; 
+                    left: 5%;
+                }
+
+                .carousel-control-next{
+                    opacity: 1; 
+                    height: 50px; 
+                    width: 50px; 
+                    position: absolute; 
+                    top: 45%; 
+                    right: 5%;
+                }
             }
         }
 

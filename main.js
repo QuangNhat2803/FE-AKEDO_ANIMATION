@@ -27,16 +27,18 @@ $(document).on('click', '#myVideo2, #btnplay2, #btnreplay2', function (e) {
           pl2.style='display: none';
           rpl2.style='display: none';
       } else {
-          rpl2.style='display: block';
+          pl2.style='display: block';
       }
   return false;
 });
 
 
+{
 var vid = document.getElementById("myVideo");
+var rpl = document.getElementById('btnreplay')
 var vid2 = document.getElementById("myVideo2");
 var rpl2 = document.getElementById('btnreplay2')
-var rpl = document.getElementById('btnreplay')
+
 vid.onended = function() {
   rpl.style='display: block';
 };
@@ -49,9 +51,10 @@ vid2.onended = function() {
 vid2.oncanplay = function(){
   rpl2.style='display: none';
 };
+}
 
 
-    
+
 function changeGr1() {  
     var gr1 = document.getElementById("group1")
     var gr2 = document.getElementById("group2")
