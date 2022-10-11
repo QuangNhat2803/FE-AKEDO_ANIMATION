@@ -53,6 +53,20 @@ vid2.oncanplay = function(){
 };
 }
 
+const nextIcon = document.querySelector(".carousel-control-prev-s2")
+const prevIcon = document.querySelector(".carousel-control-next-s2")
+$('.owl-carousel').owlCarousel({
+  items: 1,
+  loop: true,
+  lazyLoad: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    prevIcon,
+    nextIcon
+  ],
+})
+
 
 
 function changeGr1() {  

@@ -347,26 +347,29 @@ body {
   min-height: 753px;
   max-height: 800px;
 }
+.wrapper .section-collector .season-group .owl-dots {
+  display: none;
+}
 .wrapper .section-collector .season-group .content-season {
   margin-top: 90px;
   width: 100%;
   height: 100px;
 }
-.wrapper .section-collector .season-group .content-season .carousel-control-prev {
+.wrapper .section-collector .season-group .content-season .carousel-control-prev-s2 {
   opacity: 1;
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 45%;
-  left: 5%;
+  top: 49%;
+  left: -11%;
 }
-.wrapper .section-collector .season-group .content-season .carousel-control-next {
+.wrapper .section-collector .season-group .content-season .carousel-control-next-s2 {
   opacity: 1;
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 45%;
-  right: 5%;
+  top: 49%;
+  right: -11%;
 }
 .wrapper .section-collector-download,
 .wrapper .section-collector .img-prev,
@@ -379,6 +382,11 @@ body {
   max-width: 1200px;
   background-color: #000d42;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.wrapper .owl {
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -720,26 +728,29 @@ body {
   min-height: 753px;
   max-height: 800px;
 }
+.wrapper .section-collector .season-group .owl-dots {
+  display: none;
+}
 .wrapper .section-collector .season-group .content-season {
   margin-top: 90px;
   width: 100%;
   height: 100px;
 }
-.wrapper .section-collector .season-group .content-season .carousel-control-prev {
+.wrapper .section-collector .season-group .content-season .carousel-control-prev-s2 {
   opacity: 1;
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 45%;
-  left: 5%;
+  top: 49%;
+  left: -11%;
 }
-.wrapper .section-collector .season-group .content-season .carousel-control-next {
+.wrapper .section-collector .season-group .content-season .carousel-control-next-s2 {
   opacity: 1;
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 45%;
-  right: 5%;
+  top: 49%;
+  right: -11%;
 }
 .wrapper .section-collector-download,
 .wrapper .section-collector .img-prev,
@@ -752,6 +763,11 @@ body {
   max-width: 1200px;
   background-color: #000d42;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.wrapper .owl {
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -1080,26 +1096,29 @@ body {
   min-height: 753px;
   max-height: 800px;
 }
+.wrapper .section-collector .season-group .owl-dots {
+  display: none;
+}
 .wrapper .section-collector .season-group .content-season {
   margin-top: 90px;
   width: 100%;
   height: 100px;
 }
-.wrapper .section-collector .season-group .content-season .carousel-control-prev {
+.wrapper .section-collector .season-group .content-season .carousel-control-prev-s2 {
   opacity: 1;
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 45%;
-  left: 5%;
+  top: 49%;
+  left: -11%;
 }
-.wrapper .section-collector .season-group .content-season .carousel-control-next {
+.wrapper .section-collector .season-group .content-season .carousel-control-next-s2 {
   opacity: 1;
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 45%;
-  right: 5%;
+  top: 49%;
+  right: -11%;
 }
 .wrapper .section-collector-download,
 .wrapper .section-collector .img-prev,
@@ -1112,6 +1131,11 @@ body {
   max-width: 1200px;
   background-color: #000d42;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.wrapper .owl {
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -1354,26 +1378,29 @@ body {
   min-height: 753px;
   max-height: 800px;
 }
+.wrapper .section-collector .season-group .owl-dots {
+  display: none;
+}
 .wrapper .section-collector .season-group .content-season {
   margin-top: 90px;
   width: 100%;
   height: 100px;
 }
-.wrapper .section-collector .season-group .content-season .carousel-control-prev {
+.wrapper .section-collector .season-group .content-season .carousel-control-prev-s2 {
   opacity: 1;
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 45%;
-  left: 5%;
+  top: 49%;
+  left: -11%;
 }
-.wrapper .section-collector .season-group .content-season .carousel-control-next {
+.wrapper .section-collector .season-group .content-season .carousel-control-next-s2 {
   opacity: 1;
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 45%;
-  right: 5%;
+  top: 49%;
+  right: -11%;
 }
 .wrapper .section-collector-download,
 .wrapper .section-collector .img-prev,
@@ -1386,6 +1413,11 @@ body {
   max-width: 1200px;
   background-color: #000d42;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.wrapper .owl {
+  height: 100vh;
   display: flex;
   justify-content: center;
 }

@@ -87,6 +87,8 @@
             width: 100%;
             display: flex;
             justify-content: center;
+
+            
             .season-title {
                 display: flex;
                 align-items: center;
@@ -190,27 +192,31 @@
                 }
             }
 
+            .owl-dots{
+                display: none;
+            }
+
             .content-season {
                 margin-top: 90px;
                 width: 100%;
                 height: 100px;
 
-                .carousel-control-prev{
+                .carousel-control-prev-s2{
                     opacity: 1; 
                     height: 50px; 
                     width: 50px; 
                     position: absolute; 
-                    top: 45%; 
-                    left: 5%;
+                    top: 49%; 
+                    left: -11%;
                 }
 
-                .carousel-control-next{
+                .carousel-control-next-s2{
                     opacity: 1; 
                     height: 50px; 
                     width: 50px; 
                     position: absolute; 
-                    top: 45%; 
-                    right: 5%;
+                    top: 49%; 
+                    right: -11%;
                 }
             }
         }
@@ -237,5 +243,12 @@
     }
 
 
-
+    .owl{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        
+          
+          
+    }
 }
